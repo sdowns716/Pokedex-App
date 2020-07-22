@@ -1,8 +1,7 @@
 /*Colors used
 background color (white): #fff
-secondary background color (whitish blue): #f0f8ff;
-primary color (navy blue): #304a76
-button color (gold):
+text color (navy blue): #304a76
+button color (gray): #F5F5F5
 */
 
 
@@ -11,9 +10,6 @@ body {
   font-family: : 'Roboto', sans-serif;
   font-weight: 400;
   text-align: center;
-  margin: 10px auto;
-  padding: 10px auto;
-  border: 10px;
   text-transform: capitalize;
 }
 
@@ -28,19 +24,20 @@ p {
   font-family: 'Roboto', sans-serif;
   display: block;
   color: #304a76;
-  text-transform: capitalize;
+  text-transform:capitalize;
   letter-spacing: 1px;
 }
 
 /*This is where the pokemon are displayed*/
 
 .pokemon-button {
-  background-color: #d8ca9f;
+  background-color: #F5F5F5;
   color: #304a76;
   font-size: 22px;
   padding: 20px 40px;
   letter-spacing: 1px;
-  width: 400px;
+  width: 50%;
+  text-transform: capitalize;
 }
 
 .pokemon-button:hover {
@@ -62,14 +59,20 @@ p {
 #modal-container.is-visible {
   /* CSS for modal container*/
   display: block;
+  margin: 10px auto;
+  padding: 10px auto;
+  border: 10px;
   position: fixed;
-  width: 100%;
+  width: 50%;
+  margin-left: 50%;
+  margin-right: 50%;
   z-index: 999;
   overflow: auto;
   text-align: center;
-  background-color: #fff;
   opacity: 0.9;
   overflow: auto;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 #show-modal {
@@ -78,23 +81,19 @@ p {
 
 .modal {
   text-align: center;
-  margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  padding: 20px;
-  background: #f0f8ff;;
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
+  background: #F5F5F5;
+  border-color: #304a76;
+  border-width: medium;
 }
 
 .modal-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 50%;
   height: auto;
-  border-radius: 50px;
 }
 
 p {
@@ -105,20 +104,11 @@ p {
 
 
  @media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+
 }
 @media all and (max-width: 750px) {
-  .grid {
-    grid-gap: 10px;
+
   }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  } */
