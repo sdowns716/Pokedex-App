@@ -1,0 +1,124 @@
+/*Colors used
+background color (white): #fff
+secondary background color (whitish blue): #f0f8ff;
+primary color (navy blue): #304a76
+button color (gold):
+*/
+
+
+body {
+  background-color: #fff;
+  font-family: : 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px auto;
+  border: 10px;
+  text-transform: capitalize;
+}
+
+h1 {
+  color: #304a76;
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  color: #304a76;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/*This is where the pokemon are displayed*/
+
+.pokemon-button {
+  background-color: #d8ca9f;
+  color: #304a76;
+  font-size: 22px;
+  padding: 20px 40px;
+  letter-spacing: 1px;
+  width: 400px;
+}
+
+.pokemon-button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
+
+/*styling for modal*/
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container*/
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  overflow: auto;
+  text-align: center;
+  background-color: #fff;
+  opacity: 0.9;
+  overflow: auto;
+}
+
+#show-modal {
+  display: none;
+}
+
+.modal {
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #f0f8ff;;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+}
+
+.modal-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: auto;
+  border-radius: 50px;
+}
+
+p {
+  font-size: 24px;
+  font: Roboto;
+  color: #304a76;
+}
+
+
+ @media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  } */
