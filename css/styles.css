@@ -56,44 +56,61 @@ p {
   display: none;
 }
 
-#modal-container.is-visible {
-  /* CSS for modal container*/
-  display: block;
-  margin: 10px auto;
-  padding: 10px auto;
-  border: 10px;
-  position: fixed;
-  width: 50%;
-  margin-left: 50%;
-  margin-right: 50%;
-  z-index: 999;
-  overflow: auto;
-  text-align: center;
-  opacity: 0.9;
-  overflow: auto;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
+ #modal-container.is-visible {
+   position: fixed;
+   padding: 20px;
+   box-sizing: border-box;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+
+   /* to show it above other content */
+   z-index: 999;
+
+   /* to allow scrolling if the screen is not high enough*/
+   overflow: auto;
+
+   /* this is used to center the modal */
+   display: grid;
+   text-align: center;
+ }
 
 #show-modal {
   display: none;
 }
+.modal-close {
+  background-color: #F5F5F5;
+  color: #304a76;
+  border-radius: 50px;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+}
+
+.modal-close:hover {
+  background-color: #FFF;
+  cursor: pointer;
+}
 
 .modal {
-  text-align: center;
+  margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #F5F5F5;
-  border-color: #304a76;
-  border-width: medium;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  opacity: 0.9;
 }
 
 .modal-img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  width: 150px;
   height: auto;
+  margin: 0px auto;
 }
 
 p {
@@ -104,11 +121,16 @@ p {
 
 
  @media all and (max-width: 500px) {
+   .pokemon-button {
+     width: 200px;
+   }
+
+   ul {
+     padding: 20px;
+   }
+
+   title {
+     text-align: center;
+   }
 
 }
-@media all and (min-width: 500px) and (max-width: 750px) {
-
-}
-@media all and (max-width: 750px) {
-
-  }
