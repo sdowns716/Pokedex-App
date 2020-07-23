@@ -98,12 +98,13 @@ var typesElement = $('<p>' + 'Types : ' + item.types + '</p>');
 var imageElement = $('<img class="modal-img">');
 imageElement.attr('src', item.imageUrl);
 
-modal.append($closeButtonElement);
+
 modal.append(nameElement);
 modal.append(heightElement);
 modal.append(weightElement);
 modal.append(typesElement);
 modal.append(imageElement);
+modal.append($closeButtonElement);
 $modalContainer.append(modal);
 
 $modalContainer.addClass('is-visible');
@@ -116,7 +117,7 @@ function hideModal() {
   }
 
 //hides modal with escape
-jQuery(window).on('keydown', e => {
+$(window).on('keydown', e => {
    var $modalContainer = $('#modal-container');
    if (e.key === 'Escape' && $modalContainer.hasClass('is-visible')) {
      hideModal();
