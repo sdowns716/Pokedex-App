@@ -18,7 +18,7 @@ function getAll() {
   function addListItem(pokemon) {
   var $pokemonList = $('.pokemon-list');
   var $listItem = $('<li>');
-  var $button = $('<button class="pokemon-button">' + pokemon.name + '</button>');
+  var $button = $('<button type="button" class="pokemon-button btn btn-primary"> ' + pokemon.name + '</button>');
   $button.click(function() {
 			showDetails(pokemon)
   });
