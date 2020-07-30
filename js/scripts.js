@@ -70,17 +70,17 @@ function loadDetails(item) {
 //Modal functions go here.
 function showModal(item) {
 
-  var $modalContainer = $('#modal-container');
   // Clear all existing modal content
+     var $modalContainer = $('#modal-container');
+    $modalContainer.empty();
 
-  $modalContainer.empty();
 
   var modal = $('<div class="modal"></div>');
 
-//create Close button
-var $closeButtonElement = $('<button class="modal-close"></button>');
-$closeButtonElement.text('Close');
-$closeButtonElement.click(hideModal);
+  //create Close button
+  var $closeButtonElement = $('<button class="modal-close"></button>');
+  $closeButtonElement.text('Close');
+  $closeButtonElement.click(hideModal);
 
 //create Element for name
 var nameElement = $('<h1>' + item.name + '</h1>');
@@ -106,7 +106,6 @@ modal.append(typesElement);
 modal.append(imageElement);
 modal.append($closeButtonElement);
 $modalContainer.append(modal);
-
 $modalContainer.addClass('is-visible');
 }
 
