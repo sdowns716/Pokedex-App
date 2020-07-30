@@ -4,6 +4,9 @@ text color (navy blue): #304a76
 button color (gray): #F5F5F5
 */
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: #fff;
@@ -18,6 +21,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
   letter-spacing: 1px;
+  padding-top: 10px;
 }
 
 p {
@@ -26,6 +30,7 @@ p {
   color: #304a76;
   text-transform:capitalize;
   letter-spacing: 1px;
+  font-size: 24px;
 }
 
 /*This is where the pokemon are displayed*/
@@ -36,28 +41,51 @@ p {
   font-size: 22px;
   padding: 20px 40px;
   letter-spacing: 1px;
-  width: 50%;
+  width: 200px;
   text-transform: capitalize;
 }
 
-.pokemon-button:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  transition: all 0.4s ease 0s;
-  cursor: pointer;
+.btn {
+  font-family: inherit;
+  color: #304a76;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  transition-duration: 0.4s;
+  transition-property: opacity;
+  width: 100%;
+  max-width: 300px;
+  min-width: 70px;
 }
 
 .pokemon-list {
   list-style-type: none;
+  margin-top: 40px;
+}
+
+/*styling for Nav Bar*/
+.navbar {
+max-height: 40px;
+}
+
+.nav-item {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-item:hover {
+  cursor: pointer;
 }
 
 /*styling for modal*/
 
 #modal-container {
   display: none;
+  padding-top: 90px;
 }
 
  #modal-container.is-visible {
-   position: fixed;
    padding: 20px;
    box-sizing: border-box;
    top: 0;
@@ -77,14 +105,11 @@ p {
    text-align: center;
  }
 
-#show-modal {
-  display: none;
-}
-.modal-close {
+.btn-secondary {
   background-color: #F5F5F5;
   color: #304a76;
   border-radius: 50px;
-  width: 100px;
+  width: 200px;
   height: 50px;
   margin: auto;
 }
@@ -95,15 +120,21 @@ p {
 }
 
 .modal {
-  margin: auto;
+  margin: 40px 20px;
   display: inline-block;
   box-sizing: border-box;
   background: #fff;
   padding: 15px;
   width: 100%;
-  max-width: 700px;
+  height: auto;
   text-align: center;
   opacity: 0.9;
+  background-size: 100%;
+  border-radius: 50px;
+  border-width: 5px;
+  border-style: solid;
+  max-width: 450px;
+letter-spacing: 3px;
 }
 
 .modal-img {
@@ -113,11 +144,8 @@ p {
   margin: 0px auto;
 }
 
-p {
-  font-size: 24px;
-  font: Roboto;
-  color: #304a76;
-}
+
+
 
 
  @media all and (max-width: 500px) {
