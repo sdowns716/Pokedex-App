@@ -45,7 +45,9 @@ function getAll() {
             add(pokemon);
           });
         }).catch(function (error) {
+          /* eslint-disable no-console */
           console.error(error);
+          /* eslint-enable no-console */
         });
       }
 
@@ -63,7 +65,9 @@ function loadDetails(item) {
           item.types.push(details.types[i].type.name);
         }
         }).catch(function (e) {
+          /* eslint-disable no-console */
           console.error(e)
+          /* eslint-enable no-console */
         });
       }
 
@@ -124,7 +128,7 @@ $(window).on('keydown', e => {
  });
 
  // Hides modal if clicked outside of it
- var $modalContainer = document.querySelector('#modal-container');
+ $modalContainer = document.querySelector('#modal-container');
  $modalContainer.addEventListener('click', e => {
    var target = e.target;
    if (target === $modalContainer) {
