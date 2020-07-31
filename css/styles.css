@@ -21,7 +21,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   text-transform: capitalize;
   letter-spacing: 1px;
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 p {
@@ -31,6 +31,11 @@ p {
   text-transform:capitalize;
   letter-spacing: 1px;
   font-size: 24px;
+}
+
+.pokemon_logo {
+  float: left;
+  margin: 10px;
 }
 
 /*This is where the pokemon are displayed*/
@@ -43,6 +48,7 @@ p {
   letter-spacing: 1px;
   width: 200px;
   text-transform: capitalize;
+  margin: 10px;
 }
 
 .btn {
@@ -62,6 +68,15 @@ p {
 .pokemon-list {
   list-style-type: none;
   margin-top: 40px;
+  padding-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1px;
+  grid-column-gap: 1px;
+  margin: 1px;
 }
 
 /*styling for Nav Bar*/
@@ -79,6 +94,10 @@ max-height: 40px;
 }
 
 /*styling for modal*/
+
+#exampleModal {
+  display: none;
+}
 
 #modal-container {
   display: none;
@@ -145,20 +164,38 @@ letter-spacing: 3px;
 }
 
 
+@media all and (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .pokemon-button {
+    font-size: 18px;
+  }
+  ul {
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .modal {
+    width: 75%;
+    margin-left: 40px;
+  }
 
+}
 
+@media all and (min-width: 700px) and (max-width: 1000px) {
 
- @media all and (max-width: 500px) {
-   .pokemon-button {
-     width: 200px;
-   }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-   ul {
-     padding: 20px;
-   }
+  ul {
+    padding: 20px;
+  }
 
-   title {
-     text-align: center;
-   }
-
+  title {
+    text-align: center;
+  }
 }
