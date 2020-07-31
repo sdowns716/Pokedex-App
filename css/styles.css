@@ -10,7 +10,7 @@ button color (gray): #F5F5F5
 
 body {
   background-color: #fff;
-  font-family: : 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   text-align: center;
   text-transform: capitalize;
@@ -31,7 +31,10 @@ p {
   text-transform:capitalize;
   letter-spacing: 1px;
   font-size: 24px;
+  text-align: center;
 }
+
+/*Navigation Bar*/
 
 .pokemon_logo {
   float: left;
@@ -95,6 +98,31 @@ max-height: 40px;
 
 /*styling for modal*/
 
+.modal {
+  margin: 40px 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  opacity: 0.9;
+  background-size: 100%;
+  border-radius: 50px;
+  border-width: 5px;
+  border-style: solid;
+  max-width: 450px;
+  letter-spacing: 3px;
+}
+
+.modal-img {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin: 0px auto;
+}
+
 #exampleModal {
   display: none;
 }
@@ -137,32 +165,6 @@ max-height: 40px;
   background-color: #FFF;
   cursor: pointer;
 }
-
-.modal {
-  margin: 40px 20px;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  opacity: 0.9;
-  background-size: 100%;
-  border-radius: 50px;
-  border-width: 5px;
-  border-style: solid;
-  max-width: 450px;
-letter-spacing: 3px;
-}
-
-.modal-img {
-  display: block;
-  width: 150px;
-  height: auto;
-  margin: 0px auto;
-}
-
 
 @media all and (max-width: 700px) {
   .grid {
