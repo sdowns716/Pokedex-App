@@ -9,7 +9,7 @@ button color (gray): #F5F5F5
 }
 
 body {
-  background-color: #fff;
+  background: #FFF;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   text-align: center;
@@ -43,7 +43,8 @@ p {
 
 /*This is where the pokemon are displayed*/
 
-.pokemon-button {
+.pokemon-button,
+button {
   background-color: #F5F5F5;
   color: #304a76;
   font-size: 22px;
@@ -52,20 +53,6 @@ p {
   width: 200px;
   text-transform: capitalize;
   margin: 10px;
-}
-
-.btn {
-  font-family: inherit;
-  color: #304a76;
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 4px;
-  text-transform: capitalize;
-  transition-duration: 0.4s;
-  transition-property: opacity;
-  width: 100%;
-  max-width: 300px;
-  min-width: 70px;
 }
 
 .pokemon-list {
@@ -107,7 +94,7 @@ max-height: 40px;
   width: 100%;
   height: auto;
   text-align: center;
-  opacity: 0.9;
+  /*opacity: 0.9;*/
   background-size: 100%;
   border-radius: 50px;
   border-width: 5px;
@@ -132,6 +119,10 @@ max-height: 40px;
   padding-top: 90px;
 }
 
+.modal-container {
+  background: aliceblue;
+}
+
  #modal-container.is-visible {
    padding: 20px;
    box-sizing: border-box;
@@ -139,7 +130,7 @@ max-height: 40px;
    left: 0;
    width: 100%;
    height: 100%;
-   background: rgba(0, 0, 0, 0.5);
+
 
    /* to show it above other content */
    z-index: 999;
@@ -151,15 +142,6 @@ max-height: 40px;
    display: grid;
    text-align: center;
  }
-
-.btn-secondary {
-  background-color: #F5F5F5;
-  color: #304a76;
-  border-radius: 50px;
-  width: 200px;
-  height: 50px;
-  margin: auto;
-}
 
 .modal-close:hover {
   background-color: #FFF;
