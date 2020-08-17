@@ -90,13 +90,13 @@ function showModal(item) {
 var nameElement = $('<h1>' + item.name + '</h1>');
 
 //create Element for height
-var heightElement = $('<p>' + 'Height:' + item.height + 'm' + '</p>');
+var heightElement = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
 
 //create Element for Weight
-var weightElement = $('<p>' + 'Weight:' + item.weight + 'kg' + '</p>');
+var weightElement = $('<p>' + 'Weight: ' + item.weight + 'kg' + '</p>');
 
 // Create element for type in modal content
-var typesElement = $('<p>' + 'Types : ' + item.types + '</p>');
+var typesElement = $('<p>' + 'Types: ' + item.types + '</p>');
 
 //create Element for image
 var imageElement = $('<img class="modal-img">');
