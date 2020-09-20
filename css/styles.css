@@ -14,6 +14,7 @@ body {
   font-weight: 400;
   text-align: center;
   text-transform: capitalize;
+  padding-top: 40px;
 }
 
 h1 {
@@ -82,6 +83,7 @@ max-height: 40px;
 .nav-item:hover {
   cursor: pointer;
 }
+
 
 /*styling for modal*/
 
@@ -165,6 +167,9 @@ max-height: 40px;
   .modal {
     width: 75%;
     margin-left: 40px;
+  }
+  .navbar {
+    max-height: none;
   }
 
 }
