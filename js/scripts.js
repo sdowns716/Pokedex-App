@@ -19,6 +19,7 @@ var pokemonRepository = (function () {
     var $pokemonList = $('.pokemon-list');
     var $listItem = $('<li>');
     var $button = $('<button type="button" class="pokemon-button btn btn-primary"> ' + pokemon.name + '</button>');
+
     $button.click(function() {
       showDetails(pokemon)
     });
@@ -54,6 +55,7 @@ var pokemonRepository = (function () {
   //fetches additional details using details URL of the provided pokemon object then adds them to it
   function loadDetails(item) {
     var url = item.detailsUrl;
+
     return $.ajax(url)
     .then(function (details)  {
       // Add details to the item
@@ -76,32 +78,20 @@ var pokemonRepository = (function () {
 
     // Clear all existing modal content
     var $modalContainer = $('#modal-container');
+    var modal = $('<div class="modal"></div>');
+    var $closeButtonElement = $('<button class="modal-close"></button>');
+    var nameElement = $('<h1>' + item.name + '</h1>');
+    var heightElement = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
+    var weightElement = $('<p>' + 'Weight: ' + item.weight + 'kg' + '</p>');
+    var typesElement = $('<p>' + 'Types: ' + item.types + '</p>');
+    var imageElement = $('<img class="modal-img">');
+
     $modalContainer.empty();
 
-
-    var modal = $('<div class="modal"></div>');
-
-    //create Close button
-    var $closeButtonElement = $('<button class="modal-close"></button>');
     $closeButtonElement.text('Close');
     $closeButtonElement.click(hideModal);
 
-    //create Element for name
-    var nameElement = $('<h1>' + item.name + '</h1>');
-
-    //create Element for height
-    var heightElement = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
-
-    //create Element for Weight
-    var weightElement = $('<p>' + 'Weight: ' + item.weight + 'kg' + '</p>');
-
-    // Create element for type in modal content
-    var typesElement = $('<p>' + 'Types: ' + item.types + '</p>');
-
-    //create Element for image
-    var imageElement = $('<img class="modal-img">');
     imageElement.attr('src', item.imageUrl);
-
 
     modal.append(nameElement);
     modal.append(heightElement);
@@ -122,6 +112,7 @@ var pokemonRepository = (function () {
   //hides modal with escape
   $(window).on('keydown', e => {
     var $modalContainer = $('#modal-container');
+
     if (e.key === 'Escape' && $modalContainer.hasClass('is-visible')) {
       hideModal();
     }
@@ -131,6 +122,7 @@ var pokemonRepository = (function () {
   $modalContainer = document.querySelector('#modal-container');
   $modalContainer.addEventListener('click', e => {
     var target = e.target;
+
     if (target === $modalContainer) {
       hideModal();
     }
